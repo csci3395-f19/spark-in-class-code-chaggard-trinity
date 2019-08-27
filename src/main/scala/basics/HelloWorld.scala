@@ -7,7 +7,7 @@ import swiftvis2.plotting.renderer.SwingRenderer
 /**
  * This is here to remind you how to write Scala and to make it so that
  * the directories for src actually go into the git repository.
- */
+ **/
 object HelloWorld {
 	def main(args: Array[String]): Unit = {
 		println("Hello World!")
