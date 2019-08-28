@@ -27,9 +27,13 @@ object SATemps{
     println(wetDay1)
     println(wetDay2)
 
-    val wetdays = data.count(_.precip > 1.0)
-    println(wetdays)
-    println((wetdays.toDouble / data.length.toDouble)*100)
-  }
+    val wetdaycount = data.count(_.precip > 1.0)
+    println(wetdaycount)
+    println((wetdaycount.toDouble / data.length.toDouble)*100)
+
+    val wetdays = data.filter(x => x.precip > 0.0)
+    val hotWet = wetdays.map(_.tmax).sum / wetdays.length
+    println(hotWet)
+    }
 
 }
